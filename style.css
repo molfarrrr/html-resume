@@ -164,11 +164,11 @@ li{
   padding-top: var(--row-blocks-padding-top);
 }
 
-.date{
+.date {
   flex: 0 0 var(--date-block-width);
   padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
   padding-right: var(--decorator-horizontal-margin);
-  font-size: 8pt;
+  font-size: 8.2pt;
   text-align: right;
   line-height: 1;
 }
