@@ -76,8 +76,12 @@ li{
 #title{
   position: relative;
   left: 0.55in;
-  margin-bottom: 0.3in;
+  margin-bottom: 0.1in;
   line-height: 1.2;
+}
+
+#caption {
+  padding-left: 53px;
 }
 
 #title h1{
