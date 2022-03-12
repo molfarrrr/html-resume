@@ -12,7 +12,7 @@
   --page-height: 11in;
   --main-width: 6.4in;
   --sidebar-width: calc(var(--page-width) - var(--main-width));
-  --decorator-horizontal-margin: 0.2in;
+  --decorator-horizontal-margin: 0.12in;
 
   --sidebar-horizontal-padding: 0.2in;
 
@@ -23,7 +23,7 @@
   --decorator-outer-dim: 9px;
   --decorator-border: 1px solid #ccc;
 
-  --row-blocks-padding-top: 5pt;
+  --row-blocks-padding-top: 4.5pt;
   --date-block-width: 0.62in;
 
   --main-blocks-title-icon-offset-left: -19pt;
@@ -168,7 +168,7 @@ li{
   flex: 0 0 var(--date-block-width);
   padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
   padding-right: var(--decorator-horizontal-margin);
-  font-size: 7pt;
+  font-size: 8pt;
   text-align: right;
   line-height: 1;
 }
