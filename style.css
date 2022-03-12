@@ -202,6 +202,10 @@ li{
   padding-top: calc(var(--row-blocks-padding-top) - 0.5pt) !important; /* not sure why but this is needed for better alignment */
 }
 
+.details-caption {
+  padding: 3px 0;
+}
+
 .details header{
   color: #000;
 }
