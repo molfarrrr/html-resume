@@ -24,7 +24,7 @@
   --decorator-border: 1px solid #ccc;
 
   --row-blocks-padding-top: 5pt;
-  --date-block-width: 0.6in;
+  --date-block-width: 0.62in;
 
   --main-blocks-title-icon-offset-left: -19pt;
 }
@@ -194,10 +194,6 @@ li{
   border-left: var(--decorator-border);
 }
 
-.blocks:last-child .decorator{ /* slightly shortens it */
-  margin-bottom: 0.25in;
-}
-
 /***** fine-tunes on the details block where the real juice is *****/
 
 .details{
@@ -211,7 +207,7 @@ li{
 }
 
 .details h3{
-  font-size: 9pt;
+  font-size: 10pt;
 }
 
 .main-block:not(.concise) .details div{
@@ -230,7 +226,6 @@ li{
 
 .details .place{
   float: left;
-  font-size: 7.5pt;
 }
 
 .details .location{
