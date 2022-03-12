@@ -53,7 +53,7 @@ li{
   float: left;
   width: var(--main-width);
   padding: 0.25in 0.25in 0 0.25in;
-  font-size: 7pt;
+  font-size: 10pt;
 }
 
 #sidebar{
@@ -63,7 +63,7 @@ li{
   height: 100%;
   padding: 0.6in var(--sidebar-horizontal-padding);
   border-left: 2px solid #f2f2f2;
-  font-size: 8.5pt;
+  font-size: 10pt;
 }
 
 /* main */
@@ -194,39 +194,6 @@ li{
   border-left: var(--decorator-border);
 }
 
-/*
- * XXX: Use two filled circles to achieve the circle-with-white-border effect.
- * The normal technique of only using one pseudo element and
- * border: 1px solid white; style makes firefox erroneously either:
- * 1) overflows the grayshade background (if no background-clip is set), or
- * 2) shows decorator line which should've been masked by the white border
- *
- */
-
-/*.decorator::before{*/
-/*  position: absolute;*/
-/*  top: var(--decorator-outer-offset-top);*/
-/*  left: var(--decorator-outer-offset-left);*/
-/*  content: ' ';*/
-/*  display: block;*/
-/*  width: var(--decorator-outer-dim);*/
-/*  height: var(--decorator-outer-dim);*/
-/*  border-radius: calc(var(--decorator-outer-dim) / 2);*/
-/*  background-color: #fff;*/
-/*}*/
-
-/*.decorator::after{*/
-/*  position: absolute;*/
-/*  top: calc(var(--decorator-outer-offset-top) + var(--decorator-border-width));*/
-/*  left: calc(var(--decorator-outer-offset-left) + var(--decorator-border-width));*/
-/*  content: ' ';*/
-/*  display: block;*/
-/*  width: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));*/
-/*  height: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));*/
-/*  border-radius: calc((var(--decorator-outer-dim) - (var(--decorator-border-width) * 2)) / 2);*/
-/*  background-color: #555;*/
-/*}*/
-
 .blocks:last-child .decorator{ /* slightly shortens it */
   margin-bottom: 0.25in;
 }
@@ -328,8 +295,12 @@ li{
   font-size: 11pt;
 }
 
-.side-block{
+.side-block:not(:first-child){
   margin-top: 0.5in; 
+}
+
+.info i {
+  padding-right: 5px;
 }
 
 #contact ul{
@@ -371,3 +342,41 @@ li{
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?lmk6o9');
+  src:  url('fonts/icomoon.eot?lmk6o9#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?lmk6o9') format('truetype'),
+  url('fonts/icomoon.woff?lmk6o9') format('woff'),
+  url('fonts/icomoon.svg?lmk6o9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail4:before {
+  content: "\ea86";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
