@@ -1,381 +1,382 @@
-@page{
-  size: letter portrait;
-  margin: 0;
+@page {
+    size: letter portrait;
+    margin: 0;
 }
 
-*{
-  box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
-:root{
-  --page-width: 8.5in;
-  --page-height: 11in;
-  --main-width: 6.4in;
-  --sidebar-width: calc(var(--page-width) - var(--main-width));
-  --decorator-horizontal-margin: 0.12in;
+:root {
+    --page-width: 8.5in;
+    --page-height: 11in;
+    --main-width: 6.4in;
+    --sidebar-width: calc(var(--page-width) - var(--main-width));
+    --decorator-horizontal-margin: 0.12in;
 
-  --sidebar-horizontal-padding: 0.2in;
+    --sidebar-horizontal-padding: 0.2in;
 
-  /* XXX: using px for very good precision control */
-  --decorator-outer-offset-top: 10px;
-  --decorator-outer-offset-left: -5.5px;
-  --decorator-border-width: 1px;
-  --decorator-outer-dim: 9px;
-  --decorator-border: 1px solid #ccc;
+    /* XXX: using px for very good precision control */
+    --decorator-outer-offset-top: 10px;
+    --decorator-outer-offset-left: -5.5px;
+    --decorator-border-width: 1px;
+    --decorator-outer-dim: 9px;
+    --decorator-border: 1px solid #ccc;
 
-  --row-blocks-padding-top: 4.5pt;
-  --date-block-width: 0.62in;
+    --row-blocks-padding-top: 4.5pt;
+    --date-block-width: 0.62in;
 
-  --main-blocks-title-icon-offset-left: -19pt;
+    --main-blocks-title-icon-offset-left: -19pt;
 }
 
-body{
-  width: var(--page-width);
-  height: var(--page-height);
-  margin: 0;
-  font-family: "Open Sans", sans-serif; 
-  font-weight: 300;
-  line-height: 1.3;
-  color: #444;
-  hyphens: auto;
+body {
+    width: var(--page-width);
+    height: var(--page-height);
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #444;
+    hyphens: auto;
 }
 
-h1, h2, h3{
-  margin: 0;
-  color: #000;
+h1, h2, h3 {
+    margin: 0;
+    color: #000;
 }
 
-li{
-  list-style-type: none;
+li {
+    list-style-type: none;
 }
 
-#main{
-  float: left;
-  width: var(--main-width);
-  padding: 0.25in 0.25in 0 0.25in;
-  font-size: 10pt;
+#main {
+    float: left;
+    width: var(--main-width);
+    padding: 0.25in 0.25in 0 0.25in;
+    font-size: 10pt;
 }
 
-#sidebar{
-  float: right;
-  position: relative; /* for disclaimer */
-  width: var(--sidebar-width);
-  height: 100%;
-  padding: 0.6in var(--sidebar-horizontal-padding);
-  border-left: 2px solid #f2f2f2;
-  font-size: 10pt;
+#sidebar {
+    float: right;
+    position: relative; /* for disclaimer */
+    width: var(--sidebar-width);
+    height: 100%;
+    padding: 0.6in var(--sidebar-horizontal-padding);
+    border-left: 2px solid #f2f2f2;
+    font-size: 10pt;
 }
 
 /* main */
 
 /** big title **/
-#title, h1, h2{
-  text-transform: uppercase;
+#title, h1, h2 {
+    text-transform: uppercase;
 }
 
-#title{
-  position: relative;
-  left: 0.55in;
-  margin-bottom: 0.1in;
-  line-height: 1.2;
+#title {
+    position: relative;
+    left: 0.55in;
+    margin-bottom: 0.1in;
+    line-height: 1.2;
 }
 
 #caption {
-  padding-left: 53px;
+    padding-left: 53px;
 }
 
-#title h1{
-  font-weight: 300;
-  font-size: 18pt;
-  line-height: 1.5;
+#title h1 {
+    font-weight: 300;
+    font-size: 18pt;
+    line-height: 1.5;
 }
 
-#title h1 strong{
-  margin: auto 2pt auto 4pt;
-  font-weight: 600;
+#title h1 strong {
+    margin: auto 2pt auto 4pt;
+    font-weight: 600;
 }
 
-.subtitle{
-  font-size: 8pt;
+.subtitle {
+    font-size: 8pt;
 }
 
 /*** categorial blocks ***/
 
-.main-block{
-  margin-top: 0.1in;
+.main-block {
+    margin-top: 0.1in;
 }
 
-#main h2{
-  position: relative;
-  top: var(--row-blocks-padding-top);
-  /* XXX: 0.5px for aligning fx printing */
-  left: calc((var(--date-block-width) + var(--decorator-horizontal-margin)));
-  font-weight: 400;
-  font-size: 11pt;
-  color: #555;
+#main h2 {
+    position: relative;
+    top: var(--row-blocks-padding-top);
+    /* XXX: 0.5px for aligning fx printing */
+    left: calc((var(--date-block-width) + var(--decorator-horizontal-margin)));
+    font-weight: 400;
+    font-size: 11pt;
+    color: #555;
 }
 
-#main h2 > i{
-  /* use absolute position to prevent icon's width from misaligning title */
-  /* assigning a fixed width here is no better due to needing to align decorator
-     line too */
-  position: absolute;
-  left: var(--main-blocks-title-icon-offset-left);
-  z-index: 1; /* over decorator line */
-  color: #444;
+#main h2 > i {
+    /* use absolute position to prevent icon's width from misaligning title */
+    /* assigning a fixed width here is no better due to needing to align decorator
+       line too */
+    position: absolute;
+    left: var(--main-blocks-title-icon-offset-left);
+    z-index: 1; /* over decorator line */
+    color: #444;
 }
 
-#main h2::after{ /* extends the decorator line */
-  height: calc(var(--row-blocks-padding-top) * 2);
-  position: relative;
-  top: calc(-1 * var(--row-blocks-padding-top));
-  /* XXX: 0.5px for aligning fx printing */
-  left: calc(-1 * var(--decorator-horizontal-margin));
-  display: block;
-  border-left: var(--decorator-border);
-  z-index: 0;
-  line-height: 0;
-  font-size: 0;
-  content: ' ';
+#main h2::after { /* extends the decorator line */
+    height: calc(var(--row-blocks-padding-top) * 2);
+    position: relative;
+    top: calc(-1 * var(--row-blocks-padding-top));
+    /* XXX: 0.5px for aligning fx printing */
+    left: calc(-1 * var(--decorator-horizontal-margin));
+    display: block;
+    border-left: var(--decorator-border);
+    z-index: 0;
+    line-height: 0;
+    font-size: 0;
+    content: ' ';
 }
 
 /**** minor tweaks on the icon fonts ****/
-#main h2 > .fa-graduation-cap{
-  left: calc(var(--main-blocks-title-icon-offset-left) - 2pt);
-  top: 2pt;
+#main h2 > .fa-graduation-cap {
+    left: calc(var(--main-blocks-title-icon-offset-left) - 2pt);
+    top: 2pt;
 }
 
-#main h2 > .fa-suitcase{
-  top: 1pt;
+#main h2 > .fa-suitcase {
+    top: 1pt;
 }
 
-#main h2 > .fa-folder-open{
-  top: 1.5pt;
+#main h2 > .fa-folder-open {
+    top: 1.5pt;
 }
 
 /**** individual row blocks (date - decorator - details) ****/
 
-.blocks{
-  display: flex;
-  flex-flow: row nowrap;
+.blocks {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
-.blocks > div{
-  padding-top: var(--row-blocks-padding-top);
+.blocks > div {
+    padding-top: var(--row-blocks-padding-top);
 }
 
 .date {
-  flex: 0 0 var(--date-block-width);
-  padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
-  padding-right: var(--decorator-horizontal-margin);
-  font-size: 8.2pt;
-  text-align: right;
-  line-height: 1;
+    flex: 0 0 var(--date-block-width);
+    padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
+    padding-right: var(--decorator-horizontal-margin);
+    font-size: 8.2pt;
+    text-align: right;
+    line-height: 1;
 }
 
-.date span{
-  display: block;
+.date span {
+    display: block;
 }
 
-.date span:nth-child(2)::before{
-  position: relative;
-  top: 1pt;
-  right: 5.5pt;
-  display: block;
-  height: 10pt;
-  content: '|';
+.date span:nth-child(2)::before {
+    position: relative;
+    top: 1pt;
+    right: 5.5pt;
+    display: block;
+    height: 10pt;
+    content: '|';
 }
 
-.decorator{
-  flex: 0 0 0;
-  position: relative;
-  width: 2pt;
-  min-height: 100%;
-  border-left: var(--decorator-border);
+.decorator {
+    flex: 0 0 0;
+    position: relative;
+    width: 2pt;
+    min-height: 100%;
+    border-left: var(--decorator-border);
 }
 
 /***** fine-tunes on the details block where the real juice is *****/
 
-.details{
-  flex: 1 0 0;
-  padding-left: var(--decorator-horizontal-margin);
-  padding-top: calc(var(--row-blocks-padding-top) - 0.5pt) !important; /* not sure why but this is needed for better alignment */
+.details {
+    flex: 1 0 0;
+    padding-left: var(--decorator-horizontal-margin);
+    padding-top: calc(var(--row-blocks-padding-top) - 0.5pt) !important; /* not sure why but this is needed for better alignment */
 }
 
 .details-caption {
-  padding: 3px 0;
+    padding: 3px 0;
 }
 
-.details header{
-  color: #000;
+.details header {
+    color: #000;
 }
 
-.details h3{
-  font-size: 10pt;
+.details h3 {
+    font-size: 10pt;
 }
 
-.main-block:not(.concise) .details div{
-  margin: 0.18in 0 0.1in 0; 
+.main-block:not(.concise) .details div {
+    margin: 0.18in 0 0.1in 0;
 }
 
-.main-block:not(.concise) .blocks:last-child .details div{
-  margin-bottom: 0;
+.main-block:not(.concise) .blocks:last-child .details div {
+    margin-bottom: 0;
 }
 
-.main-block.concise .details div:not(.concise){
-  /* use padding to work around the fact that margin doesn't affect floated
-     neighboring elements */
-  padding: 0.05in 0 0.07in 0;
+.main-block.concise .details div:not(.concise) {
+    /* use padding to work around the fact that margin doesn't affect floated
+       neighboring elements */
+    padding: 0.05in 0 0.07in 0;
 }
 
-.details .place{
-  float: left;
+.details .place {
+    float: left;
 }
 
-.details .location{
-  float: right;
+.details .location {
+    float: right;
 }
 
-.details div{
-  clear: both;
+.details div {
+    clear: both;
 }
 
-.details .location::before{
-  display: inline-block;
-  position: relative;
-  right: 3pt;
-  top: 0.25pt;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  content: "\f041";
+.details .location::before {
+    display: inline-block;
+    position: relative;
+    right: 3pt;
+    top: 0.25pt;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    content: "\f041";
 }
 
 /***** fine-tunes on the lists... *****/
 
-#main ul{
-  padding-left: 0.07in;
-  margin: 0.08in 0;
+#main ul {
+    padding-left: 0.07in;
+    margin: 0.08in 0;
 }
 
-#main li{
-  margin: 0 0 0.025in 0;
+#main li {
+    margin: 0 0 0.025in 0;
 }
 
 /****** customize list symbol style ******/
-#main li::before{
-  position: relative;
-  margin-left: -4.25pt;
-  content: '• ';
+#main li::before {
+    position: relative;
+    margin-left: -4.25pt;
+    content: '• ';
 }
 
-.details .concise ul{
-  margin: 0 !important;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  columns: 2;
+.details .concise ul {
+    margin: 0 !important;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
 }
 
-.details .concise li{
-  margin: 0 !important;
+.details .concise li {
+    margin: 0 !important;
 }
 
-.details .concise li{
-  margin-left: 0 !important;
+.details .concise li {
+    margin-left: 0 !important;
 }
-
 
 
 /* sidebar */
 
-#sidebar h1{
-  font-weight: 400;
-  font-size: 11pt;
+#sidebar h1 {
+    font-weight: 400;
+    font-size: 11pt;
 }
 
-.side-block:not(:first-child){
-  margin-top: 0.5in; 
+.side-block:not(:first-child) {
+    margin-top: 0.5in;
 }
 
 .info i {
-  padding-right: 5px;
+    padding-right: 5px;
 }
 
-#contact ul{
-  margin-top: 0.05in;
-  padding-left: 0;
-  font-family: "Source Code Pro";
-  font-weight: 400;
-  line-height: 1.75;
+#contact ul {
+    margin-top: 0.05in;
+    padding-left: 0;
+    font-family: "Source Code Pro";
+    font-weight: 400;
+    line-height: 1.75;
 }
 
-#contact li > i{
-  width: 9pt; /* for text alignment */
-  text-align: right;
+#contact li > i {
+    width: 9pt; /* for text alignment */
+    text-align: right;
 }
 
-#skills{
-  line-height: 1.5;
+#skills {
+    line-height: 1.5;
 }
 
-#skills ul{
-  margin: 0.05in 0 0.15in;
-  padding: 0;
+#skills ul {
+    margin: 0.05in 0 0.15in;
+    padding: 0;
 }
 
-#disclaimer{
-  position: absolute;
-  bottom: var(--sidebar-horizontal-padding);
-  right: var(--sidebar-horizontal-padding);
-  font-size: 7.5pt;
-  font-style: italic;
-  line-height: 1.1;
-  text-align: right;
-  color: #777;
+#disclaimer {
+    position: absolute;
+    bottom: var(--sidebar-horizontal-padding);
+    right: var(--sidebar-horizontal-padding);
+    font-size: 7.5pt;
+    font-style: italic;
+    line-height: 1.1;
+    text-align: right;
+    color: #777;
 }
 
-#disclaimer code{
-  color: #666;
-  font-family: "Source Code Pro";
-  font-weight: 400;
-  font-style: normal;
+#disclaimer code {
+    color: #666;
+    font-family: "Source Code Pro";
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?lmk6o9');
-  src:  url('fonts/icomoon.eot?lmk6o9#iefix') format('embedded-opentype'),
-  url('fonts/icomoon.ttf?lmk6o9') format('truetype'),
-  url('fonts/icomoon.woff?lmk6o9') format('woff'),
-  url('fonts/icomoon.svg?lmk6o9#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?lmk6o9');
+    src: url('fonts/icomoon.eot?lmk6o9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?lmk6o9') format('truetype'),
+    url('fonts/icomoon.woff?lmk6o9') format('woff'),
+    url('fonts/icomoon.svg?lmk6o9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-mail4:before {
-  content: "\ea86";
+    content: "\ea86";
 }
+
 .icon-whatsapp:before {
-  content: "\ea93";
+    content: "\ea93";
 }
+
 .icon-linkedin2:before {
-  content: "\eaca";
+    content: "\eaca";
 }
 
