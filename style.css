@@ -105,6 +105,10 @@ li {
     margin-top: 0.1in;
 }
 
+#caption {
+    text-align: justify;
+}
+
 #main h2 {
     position: relative;
     top: var(--row-blocks-padding-top);
@@ -214,6 +218,8 @@ li {
     font-size: 10pt;
 }
 
+
+
 .main-block:not(.concise) .details div {
     margin: 0.18in 0 0.1in 0;
 }
@@ -234,10 +240,11 @@ li {
 
 .details .location {
     float: right;
+    font-weight: 500;
 }
 
-.details div {
-    clear: both;
+.location.h3 {
+    
 }
 
 .details .location::before {
@@ -245,11 +252,9 @@ li {
     position: relative;
     right: 3pt;
     top: 0.25pt;
-    font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
     text-decoration: inherit;
-    content: "\f041";
 }
 
 /***** fine-tunes on the lists... *****/
